@@ -1,3 +1,10 @@
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv()  # reads local .env during dev; harmless in Azure
+except Exception:
+    pass
+
 from datetime import datetime, timedelta
 import csv
 import io
